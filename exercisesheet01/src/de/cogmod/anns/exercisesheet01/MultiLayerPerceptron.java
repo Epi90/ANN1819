@@ -309,6 +309,8 @@ public class MultiLayerPerceptron {
         final LearningListener listener
     ) {
         //
+    	System.out.println("Test1");
+    	//
         assert(input.length == target.length);
         //
         final double[] weights           = new double[this.weightsnum];

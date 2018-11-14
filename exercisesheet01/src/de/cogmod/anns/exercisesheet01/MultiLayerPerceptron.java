@@ -198,20 +198,41 @@ public class MultiLayerPerceptron {
         //
         
         // ...
+        // error = target - input
+        int outputLayerIndex = layersnum - 1;
+        int layersize = this.layer[outputLayerIndex];
+
+        for (int j = 0; j < layersize; j++) {
+            double error = target[j] - act[outputLayerIndex][j];
+            this.bwbuffer[outputLayerIndex][j] = error;
+        }
+
+
         
         //
         // back-propagate the error through the network -- we compute the deltas --
         // starting with the output layer.
         //
 
-        // ...
+        // compute delta j for each neuron
+        // delta = error/net
+        for (int l = layersnum - 1; l >= 0; l--) {
+            for (int j = 0; j < layersize; j++) {
+                double deltaValue = bwbuffer[l][j] / net[l][j];
+                this.delta[l][j] = deltaValue;
+            }
+        }
         
         
         // 
         // Compute the weights derivatives.
         //
         // this.dweights !!!!
-        // ...
+        //
+
+
+
+
 
     }
     

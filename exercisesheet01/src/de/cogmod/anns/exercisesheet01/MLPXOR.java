@@ -2,7 +2,6 @@ package de.cogmod.anns.exercisesheet01;
 
 import java.util.Random;
 
-import de.cogmod.anns.exercisesheet01.MultiLayerPerceptron;
 import de.cogmod.anns.exercisesheet01.misc.BasicLearningListener;
 
 /**
